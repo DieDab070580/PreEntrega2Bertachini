@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+li{
+    padding: 15px;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: gray;
+    font-size: 15px;
+    transition: 1s all;
+}
+a:hover{
+    color: rgb(202, 35, 35);
+    background-color: #f3dc09;
+    padding: 3px;
+    border-radius: 5px;
+}
+a:active{
+    background-color:rgb(207, 207, 207);
+}
+.padi20{
+    padding: 15px 10px 10px 10px;
+}
+a:visited{
+    color: rgb(202, 35, 35);
+}
+input:focus{
+    height: 40px;
+    font-size: 25px;
+    color:  rgb(202, 35, 35);;
+}
+h1{
+    text-align: center;  
+    font-size: 22px;
+}
+header{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky; top: 0;
+}
+main{
+    grid-area: main;
+    padding: 10px;
+}
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    background-color: rgb(230, 230, 230);
+    font-size: 12px;
+    align-items: center;
+}
+ul{
+    grid-area: header;
+    display: flex;
+}
+p{
+    padding: 5px;
+}
+h4{
+    text-align: center;
+}
+.gridMainIndex{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: auto auto auto;
+    grid-template-areas: 
+    "fotoprincipalhome fotoprincipalhome fotoprincipalhome"
+    "titulo titulo titulo"
+    "pIzq imgP pDer";
+}
+.fotoprincipalhome{
+    grid-area: fotoprincipalhome;
+}
+.titulo{
+    grid-area: titulo;
+}
+.parrafoIzq{
+    grid-area: pIzq;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.imgtexto{
+    grid-area: imgP;
+    width: 50%;
+}
+.imgfluid{
+    width: 100%; height: auto;
+}
+.gridMainProductos{
+    display: grid;
+    grid-template-areas: 
+    "tituloProductos tituloProductos tituloProductos tituloProductos"
+    "prodA prodB prodC prodD";
+    grid-template-columns: repeat 25% 25% 25% 25% ;
+    grid-template-rows: auto auto;
+}
+.tituloProductos{
+    grid-area: tituloProductos;
+}
+.prodA{
+    grid-area: prodA;
+}
+.prodB{
+    grid-area: prodB;
+}
+.prodC{
+    grid-area: prodC;
+}
+.prodD{
+    grid-area: prodD;
+}
+.prod{
+    background-color: rgb(211, 211, 211); padding: 5px; margin: 15px; border-radius: 10px;
+}
+.gridMainServicios{
+    display: grid;
+    grid-template-areas: 
+    "tituloProductos tituloProductos tituloProductos"
+    "prodA prodB prodC"
+    "prodD prodE prodF";
+    grid-template-columns: repeat(25%);
+    grid-template-rows: auto auto auto;
+}
+.gridMainNosotros{
+    display: grid;
+    grid-template-areas: 
+    "imgnosotros titulonosotros"
+    "fotodiego fotoflor";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+}
+.imgnosotros{
+    grid-area: imgnosotros;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.titulonosotros{
+    grid-area: titulonosotros;
+}
+.fotodiego{
+    grid-area: fotodiego;
+}
+.fotoflor{
+    grid-area: fotoflor;
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+.linknombres{
+    color: #646464;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 10PX;
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+.contenedorNombres{
+    background-color: rgb(211, 211, 211); padding: 15px; margin: 15px; border-radius: 10px;
+}
+.gridmainconacto{
+    display: grid;
+    grid-template-areas:
+    "encabezadoContacto encabezadoContacto"
+    "form iframemapainfocontacto"
+    "form infocontacto";
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: auto auto auto;
+}
+.gridmainconacto{
+    grid-area: gridmainconacto;
+}
+.encabezadoContacto{
+    grid-area: encabezadoContacto;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    grid-area: form;
+}
+.iframe{
+    grid-area: iframe;
+}
+@media (max-width: 768px){
+
+p{
+ font-size: 12px;
+}
+.gridmainconacto{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.logomenu{
+    width: 70px;
+    height: auto;
+}
+.gridMainNosotros{
+    display: flex;
+    flex-direction: column;
+}
+.gridMainProductos{
+    display: grid;
+    grid-template-areas: 
+    "tituloProductos tituloProductos"
+    "prodA prodB"
+    "prodC prodD"
+    "prodE prodF"
+    "prodG prodH"
+    ;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto auto;
+}
+.tituloProductos{
+    grid-area: tituloProductos;
+}
+.prodA{
+    grid-area: prodA;
+}
+.prodB{
+    grid-area: prodB;
+}
+.prodC{
+    grid-area: prodC;
+}
+.prodD{
+    grid-area: prodD;
+}
+.prodE{
+    grid-area: prodE;
+}
+.prodF{
+    grid-area: prodF;
+}
+.prodG{
+    grid-area: prodG;
+}
+.prodH{
+    grid-area: prodH;
+}
+.gridMainServicios{
+    display: grid;
+    grid-template-areas: 
+    "tituloProductos tituloProductos"
+    "prodA prodB"
+    "prodC prodD" 
+    "prodE prodF";
+    grid-template-columns: 50%;
+    grid-template-rows: auto auto auto auto;
+}
+}
